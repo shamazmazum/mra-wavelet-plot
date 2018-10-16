@@ -71,6 +71,10 @@
   "Plot scaling function and mother wavelet to files with names
  NAME-scaling.TYPE and NAME-wavelet.TYPE . `COEFF' is a sequence with coefficients
  of dilation equation. `N' is how many dilations will happen."
+  (declare (type string name type)
+           (type sequence coeff)
+           (type (integer 0) n)
+           (type (or null pathname string) directory))
   (let ((*dc* coeff)
         (scaling-name (make-pathname :name (format nil "~a-scaling" name)
                                      :type type))
