@@ -69,10 +69,10 @@
 
 (defun plot-wavelet (name coeff n &key (type "dat") directory)
   "Plot scaling function and mother wavelet to files with names
- NAME-scaling.TYPE and NAME-wavelet.TYPE . `COEFF' is a sequence with coefficients
+ NAME-scaling.TYPE and NAME-wavelet.TYPE . `COEFF' is a vector with coefficients
  of dilation equation. `N' is how many dilations will happen."
   (declare (type string name type)
-           (type sequence coeff)
+           (type vector coeff)
            (type (integer 0) n)
            (type (or null pathname string) directory))
   (let ((*dc* coeff)
